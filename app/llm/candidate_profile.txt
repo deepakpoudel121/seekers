@@ -1,0 +1,50 @@
+
+
+Name: Anil Shrestha
+Location: Kathmandu, Nepal
+
+Professional Summary
+
+Backend Engineer with 4+ years of experience building scalable web applications and APIs. Strong focus on Python-based backend systems, microservices, and cloud deployments. Experienced in working with cross-functional teams in agile environments.
+
+Skills
+Python
+Django
+FastAPI
+PostgreSQL
+Redis
+REST APIs
+Docker
+Git / GitHub
+AWS (EC2, S3, Lambda)
+Microservices architecture
+Unit testing (PyTest)
+Work Experience
+
+Backend Engineer
+FuseCloud Technologies — 2022 to Present
+
+Designed and maintained RESTful APIs using FastAPI
+Built microservices for payment processing system
+Improved API performance by 35% through caching and query optimization
+Worked with Docker-based deployment pipelines on AWS
+
+Software Engineer
+CodeWave Solutions — 2020 to 2022
+
+Developed backend services using Django
+Integrated PostgreSQL databases with optimized schema design
+Built internal admin dashboards and reporting tools
+Collaborated with frontend team to deliver full-stack features
+Education
+
+Bachelor of Computer Engineering
+Tribhuvan University, Nepal
+
+Certifications
+AWS Certified Cloud Practitioner
+Python for Backend Development (Udemy)
+Preferred Role
+Backend Engineer / Senior Backend Engineer
+Salary Expectation
+NPR 180,000 – 220,000 per month

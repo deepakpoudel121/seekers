@@ -1,0 +1,7 @@
+1. Write app/db/models/application.py    ← SQLAlchemy model
+2. Run alembic init + configure env.py
+3. alembic r
+4. alevision --autogenerateembic upgrade head
+5. Fix ApplicationRequest → just raw_jd
+6. Complete ApplicationResponse
+11. Complete the route with proper imports + await
