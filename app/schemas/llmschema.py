@@ -1,5 +1,7 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from typing import Literal
+from datetime import datetime
+
 
 class SalaryRange(BaseModel):
     min_salary: int
@@ -11,9 +13,9 @@ class Llmschema(BaseModel):
     role: str
     company: str
     required_skills: list[str]
-    salary_range: SalaryRange
-    seniority_level: Literal['junior', 'mid', 'senior']
-
+    seniority_level: Literal['junior', 'mid', 'senior', 'lead', 'unknown']
+    salary_min: int | None
+    salary_max: int | None
 
 class Matchschema(BaseModel):
     match_score: int
@@ -29,10 +31,22 @@ class Matchschema(BaseModel):
 class ApplicationRequest(BaseModel):
     application_content: str
 
+
 class ApplicationResponse(BaseModel):
-    application_id: int
-    role:str
+    model_config = ConfigDict(from_attributes=True)
+    
+    id: int
+    role: str
     company: str
-    required_skills: list[str]
-    salary_range: SalaryRange
-    seniority_level: Literal['jounior','mid','senior']
+    required_skills: list[str] | None
+    seniority: str | None
+    salary_min: int | None
+    salary_max: int | None
+    status: str
+    match_score: float | None
+    match_reasoning: str | None
+    created_at: datetime
+   
+
+class StatusUpdate:
+    status: str
