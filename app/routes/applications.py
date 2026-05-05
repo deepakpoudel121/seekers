@@ -10,13 +10,13 @@ from rich import print
 router = APIRouter(prefix='/api/v1/applications')
 
 
-@router.post('/')
+@router.post('/', response_model= ApplicationResponse)
 async def post_application(request: ApplicationRequest, db:AsyncSession = Depends(get_db)):
     try:
-        response = extract_chain.invoke({
+        response = await extract_chain.ainvoke({
                 'job_description': request.application_content,
             })
-        matcher = match_chain.invoke({
+        matcher = await match_chain.ainvoke({
             'job_description': request.application_content,
             "candidate_profile": candidate
         })
@@ -31,7 +31,7 @@ async def post_application(request: ApplicationRequest, db:AsyncSession = Depend
             raw_jd = request.application_content,
             match_score = matcher.match_score,
             match_reasoning = matcher.summary,
-            created_at = datetime.utcnow
+            created_at = datetime.utcnow()
         )
         db.add(new)
         await db.commit()
