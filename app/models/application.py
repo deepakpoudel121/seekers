@@ -18,8 +18,8 @@ class Application(Base):
     raw_jd          = Column(Text, nullable=False)
     required_skills = Column(JSON, nullable=True)      # ← list stored as JSON
     seniority       = Column(String(50), nullable=True)
-    salary_min      = Column(String, nullable=True)
-    salary_max      = Column(String, nullable=True)
+    salary_min      = Column(Integer, nullable=True)
+    salary_max      = Column(Integer, nullable=True)
     status          = Column(Enum(ApplicationStatus), default=ApplicationStatus.applied)
     match_score     = Column(Float, nullable=True)
     match_reasoning = Column(Text, nullable=True)
