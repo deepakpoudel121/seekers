@@ -8,6 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
-/alembic
+alembic
 .env
 !.env.sample
