@@ -48,5 +48,3 @@ class ApplicationResponse(BaseModel):
     created_at: datetime
    
 
-class StatusUpdate:
-    status: str
